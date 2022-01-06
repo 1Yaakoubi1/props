@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import imgesc from "./nader.jpg";
+import Profile from "./profile/profile"
 
 function App() {
+  const fullName = "Professor Dr. Nader Masmoudi";
+  const bio = "New York University mathematician and elected member of the American Society of Arts and Sciences ";
+  const proffesion = "mathematical sciences ";
+  const user = { name: fullName };
+  const HandleName = (user) => {
+    alert(`Hello Don =>  ${user}`);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile
+        fullName={fullName}
+        bio={bio}
+        profession={proffesion}
+        user={user}
+        HandleName={HandleName}
+      >
+        <img src={imgesc} alt="esc" style={{ width: "20%" }} />
+      </Profile>
     </div>
   );
 }
